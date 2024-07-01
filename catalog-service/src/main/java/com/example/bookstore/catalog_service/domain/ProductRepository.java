@@ -1,16 +1,8 @@
 package com.example.bookstore.catalog_service.domain;
 
-
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
-
-interface ProductRepository extends JpaRepository <ProductEntity , Long> {
-   Optional<ProductEntity> findByCode(String code);
-
+interface ProductRepository extends JpaRepository<ProductEntity, Long> {
+    Optional<ProductEntity> findByCode(String code);
 }
-
-
-
-
-

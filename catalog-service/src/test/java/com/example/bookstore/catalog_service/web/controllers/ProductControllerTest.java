@@ -5,9 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
 
-
 import com.example.bookstore.catalog_service.AbstractITest;
-
 import com.example.bookstore.catalog_service.domain.Product;
 import io.restassured.http.ContentType;
 import java.math.BigDecimal;
@@ -16,8 +14,6 @@ import org.springframework.test.context.jdbc.Sql;
 
 @Sql("/test-data.sql")
 class ProductControllerTest extends AbstractITest {
-
-
 
     @Test
     void shouldReturnProducts() {
@@ -35,8 +31,6 @@ class ProductControllerTest extends AbstractITest {
                 .body("hasNext", is(true))
                 .body("hasPrevious", is(false));
     }
-
-
 
     @Test
     void shouldGetProductByCode() {
@@ -68,6 +62,4 @@ class ProductControllerTest extends AbstractITest {
                 .body("title", is("Product Not Found"))
                 .body("detail", is("Product with code " + code + " not found"));
     }
-
-
 }

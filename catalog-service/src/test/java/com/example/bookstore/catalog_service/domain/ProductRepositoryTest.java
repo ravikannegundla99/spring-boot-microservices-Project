@@ -1,37 +1,30 @@
 package com.example.bookstore.catalog_service.domain;
 
-
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.math.BigDecimal;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.context.jdbc.Sql;
-
-import java.util.List;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
-
 
 @DataJpaTest(
         properties = {
-                "spring.test.database.replace=none",
-                "spring.datasource.url=jdbc:tc:postgresql:16-alpine:///db",
+            "spring.test.database.replace=none",
+            "spring.datasource.url=jdbc:tc:postgresql:16-alpine:///db",
         })
 class ProductRepositoryTest {
 
-@Autowired
+    @Autowired
     private ProductRepository productRepository;
 
-@Test
-void shouldGetAllProducts() {
-    List<ProductEntity> products = productRepository.findAll();
-    assertThat(products).hasSize(15);
-}
-
+    @Test
+    void shouldGetAllProducts() {
+        List<ProductEntity> products = productRepository.findAll();
+        assertThat(products).hasSize(15);
+    }
 
     @Test
     void shouldGetProductByCode() {
@@ -46,7 +39,4 @@ void shouldGetAllProducts() {
     void shouldReturnEmptyWhenProductCodeNotExists() {
         assertThat(productRepository.findByCode("invalid_product_code")).isEmpty();
     }
-
-
-
 }
