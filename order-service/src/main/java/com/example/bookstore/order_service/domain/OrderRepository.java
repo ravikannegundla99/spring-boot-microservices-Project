@@ -20,7 +20,7 @@ interface OrderRepository extends JpaRepository<OrderEntity, Long> {
 
     @Query(
             """
-        select new com.sivalabs.bookstore.orders.domain.models.OrderSummary(o.orderNumber, o.status)
+        select new com.example.bookstore.orders.domain.models.OrderSummary(o.orderNumber, o.status)
         from OrderEntity o
         where o.userName = :userName
         """)
