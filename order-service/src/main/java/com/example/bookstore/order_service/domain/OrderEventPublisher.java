@@ -1,10 +1,10 @@
 package com.example.bookstore.order_service.domain;
 
+import com.example.bookstore.order_service.ApplicationProperties;
 import com.example.bookstore.order_service.domain.models.OrderCancelledEvent;
 import com.example.bookstore.order_service.domain.models.OrderCreatedEvent;
 import com.example.bookstore.order_service.domain.models.OrderDeliveredEvent;
 import com.example.bookstore.order_service.domain.models.OrderErrorEvent;
-import com.example.bookstore.order_service.web.ApplicationProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;
 

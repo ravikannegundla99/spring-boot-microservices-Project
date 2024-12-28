@@ -1,6 +1,6 @@
 package com.example.bookstore.order_service.clients.catalog;
 
-import com.example.bookstore.order_service.web.ApplicationProperties;
+import com.example.bookstore.order_service.ApplicationProperties;
 import java.time.Duration;
 import org.springframework.boot.web.client.ClientHttpRequestFactories;
 import org.springframework.boot.web.client.ClientHttpRequestFactorySettings;

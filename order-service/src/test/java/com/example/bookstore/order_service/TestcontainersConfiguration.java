@@ -22,13 +22,13 @@ class TestcontainersConfiguration {
         return new RabbitMQContainer(DockerImageName.parse("rabbitmq:3.12.11-alpine"));
     }
 
-    //	@Bean
-    //	KeycloakContainer keycloak(DynamicPropertyRegistry registry) {
-    //		var keycloak = new KeycloakContainer(KEYCLOAK_IMAGE).withRealmImportFile(realmImportFile);
-    //		registry.add(
-    //				"spring.security.oauth2.resourceserver.jwt.issuer-uri",
-    //				() -> keycloak.getAuthServerUrl() + "/realms/" + realmName);
-    //		return keycloak;
-    //	}
+    //    	@Bean
+    //        KeycloakContainer keycloak(DynamicPropertyRegistry registry) {
+    //    		var keycloak = new KeycloakContainer(KEYCLOAK_IMAGE).withRealmImportFile(realmImportFile);
+    //    		registry.add(
+    //    				"spring.security.oauth2.resourceserver.jwt.issuer-uri",
+    //    				() -> keycloak.getAuthServerUrl() + "/realms/" + realmName);
+    //    		return keycloak;
+    //    	}
 
 }

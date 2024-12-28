@@ -1,4 +1,4 @@
-package com.example.bookstore.order_service.web;
+package com.example.bookstore.order_service;
 
 import net.javacrumbs.shedlock.spring.annotation.EnableSchedulerLock;
 import org.springframework.boot.SpringApplication;

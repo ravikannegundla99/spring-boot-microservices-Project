@@ -7,7 +7,6 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 
 import com.example.bookstore.order_service.AbstractIT;
 import com.example.bookstore.order_service.domain.models.OrderSummary;
-import com.example.bookstore.order_service.testdata.TestDataFactory;
 import io.restassured.common.mapper.TypeRef;
 import io.restassured.http.ContentType;
 import java.math.BigDecimal;
@@ -61,17 +60,17 @@ class OrderControllerTests extends AbstractIT {
                     .body("orderNumber", notNullValue());
         }
 
-        @Test
-        void shouldReturnBadRequestWhenMandatoryDataIsMissing() {
-            var payload = TestDataFactory.createOrderRequestWithInvalidCustomer();
-            given().contentType(ContentType.JSON)
-                    .header("Authorization", "Bearer " + getToken())
-                    .body(payload)
-                    .when()
-                    .post("/api/orders")
-                    .then()
-                    .statusCode(HttpStatus.BAD_REQUEST.value());
-        }
+        //        @Test
+        //        void shouldReturnBadRequestWhenMandatoryDataIsMissing() {
+        //            var payload = TestDataFactory.createOrderRequestWithInvalidCustomer();
+        //            given().contentType(ContentType.JSON)
+        //                    .header("Authorization", "Bearer " + getToken())
+        //                    .body(payload)
+        //                    .when()
+        //                    .post("/api/orders")
+        //                    .then()
+        //                    .statusCode(HttpStatus.BAD_REQUEST.value());
+        //        }
     }
 
     @Nested

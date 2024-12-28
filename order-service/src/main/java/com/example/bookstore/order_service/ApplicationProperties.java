@@ -1,4 +1,4 @@
-package com.example.bookstore.order_service.web;
+package com.example.bookstore.order_service;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

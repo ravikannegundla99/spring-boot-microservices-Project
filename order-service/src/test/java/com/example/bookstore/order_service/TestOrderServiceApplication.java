@@ -1,6 +1,5 @@
 package com.example.bookstore.order_service;
 
-import com.example.bookstore.order_service.web.OrderServiceApplication;
 import org.springframework.boot.SpringApplication;
 
 public class TestOrderServiceApplication {
